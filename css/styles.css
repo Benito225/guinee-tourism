@@ -1,0 +1,235 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 27 55 96;
+    --color-primary-green: 18 152 72;
+    --color-primary-yellow: 239 228 9;
+    --color-primary-orange: 246 174 49;
+    --color-secondary: 228 36 62;
+  }
+}
+
+body {
+  @apply antialiased font-sans text-base;
+  color: #404143;
+}
+
+/** ----------------------------- Navbar  ----------------------------- **/
+.brand img {
+  @apply h-[3.3rem] xlight:h-[4.3rem] w-auto;
+}
+
+.top-main-nav ul li a {
+  @apply font-semibold text-primary duration-300;
+}
+
+.top-main-nav ul li a:hover {
+  @apply font-semibold text-secondary;
+}
+
+.top-secondary-nav {
+  @apply text-lg font-semibold text-secondary;
+}
+/** ----------------------------- End Navbar ----------------------------- **/
+
+/** ----------------------------- Mobile Navbar ----------------------------- **/
+.h-menu {
+  display: flex;
+  flex-direction: column;
+  width: 35px;
+  cursor: pointer;
+}
+
+.h-menu span {
+  background: #404143;
+  border-radius: 10px;
+  height: 3.5px;
+  margin: 3px 0;
+  transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+span:nth-of-type(1) {
+  width: 50%;
+}
+
+span:nth-of-type(2) {
+  width: 100%;
+}
+
+span:nth-of-type(3) {
+  width: 75%;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+/* zeynepjs menu styles */
+.zeynep {
+  background-color: #ffffff;
+  color: #404143;
+  width: 295px;
+}
+
+.zeynep ul {
+  list-style-type: none;
+  padding: 0;
+  padding-left: 20px;
+  -webkit-overflow-scrolling: touch;
+}
+.zeynep ul > li {
+  display: block;
+}
+
+.zeynep ul > li > a {
+  color: inherit;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 18px 20px;
+  text-decoration: none;
+  transition: all 150ms;
+}
+.zeynep ul > li > a:hover {
+  background-color: #efefef;
+  border-radius: 3px;
+}
+
+.zeynep ul > li:not(:last-child) > a {
+  border-bottom: 1px solid #efefef;
+}
+
+.zeynep ul > li.has-submenu > a {
+  background-image: url("../../images/submenu-arrow.svg");
+  background-position: right 20px center;
+  background-repeat: no-repeat;
+  background-size: 8px 14px;
+}
+
+.zeynep ul > li.has-submenu > a:hover {
+  background-image: url("../../images/submenu-arrow-active.svg");
+}
+
+/* zeynepjs submenu styles */
+.zeynep .submenu {
+  background-color: #ffffff;
+  left: 295px;
+}
+
+.zeynep .submenu-header {
+  background-image: url("../../images/menu-back.svg");
+  background-position: left 20px center;
+  background-repeat: no-repeat;
+  background-size: 8px 14px;
+  border-bottom: solid 1px #efefef;
+  cursor: pointer;
+  position: relative;
+}
+
+.zeynep .submenu-header > a {
+  color: inherit;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 18px 20px;
+  padding-left: 40px;
+  text-decoration: none;
+}
+
+.zeynep .submenu-header > a:before {
+  background-image: url("../../images/submenu-arrow.svg");
+  background-position: right 20px center;
+  background-repeat: no-repeat;
+  background-size: 8px 14px;
+  content: "";
+  height: 100%;
+  left: 26px;
+  position: absolute;
+  top: 0;
+  transform: rotate(-180deg);
+  width: 20px;
+}
+
+.zeynep .submenu > label {
+  @apply text-secondary;
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  margin-top: 19px;
+  opacity: 0.5;
+  padding-left: 40px;
+  width: 100%;
+}
+
+/** ----------------------------- End Mobile Menu ----------------------------- **/
+
+.main-cover {
+  /* background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),url(https://www.etudesk.com/images/cover-about.jpg); */
+  background: url("../../images/main-cover.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  clip-path: ellipse(100% 80% at 46% 20%);
+  @apply bg-slate-200;
+}
+
+.d-items {
+  @apply relative rounded-md bg-slate-200;
+}
+
+.image-cta-1 {
+  background: url("../../images/cta-1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (max-width: 767px) {
+  .image-cta-1 h3 {
+    /* text-shadow: 2px 2px 2px #404143; */
+  }
+}
+
+.like-active {
+  @apply fill-secondary text-secondary;
+}
+
+/** ----------------------------- Rating Stars ----------------------------- **/
+.rating {
+  @apply inline-flex;
+}
+
+.rating .s-active {
+  @apply fill-white;
+}
+/** ----------------------------- End Rating Stars ----------------------------- **/
+
+/** ----------------------------- Footer ----------------------------- **/
+footer .f-link {
+  @apply flex flex-col space-y-2;
+}
+
+footer .f-link li {
+  @apply z-[2];
+}
+
+footer .f-link li a {
+  @apply text-white text-lg xlight:text-xl font-medium hover:text-slate-300 duration-300;
+}
+
+.social-link {
+  @apply flex justify-center items-center space-x-4 z-10;
+}
+
+.social-link li {
+  @apply z-10;
+}
+
+.social-link li a {
+  @apply inline-flex justify-center items-center h-10 w-10 rounded-full duration-300 bg-white hover:bg-slate-300 z-10;
+}
+/** ----------------------------- End Footer ----------------------------- **/

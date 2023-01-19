@@ -165,6 +165,10 @@ input[type="checkbox"] {
   width: 100%;
 }
 
+.top-secondary-nav .active {
+  @apply font-extrabold;
+}
+
 /** ----------------------------- End Mobile Menu ----------------------------- **/
 
 .main-cover {
@@ -197,6 +201,40 @@ input[type="checkbox"] {
 .like-active {
   @apply fill-secondary text-secondary;
 }
+
+/** ----------------------------- Contact Page ----------------------------- **/
+
+.main-cover-contact {
+  /* background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),url(https://www.etudesk.com/images/cover-about.jpg); */
+  background: url("../../images/cover-contact.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0% 70%;
+  @apply bg-slate-200;
+}
+
+.main-cover-contact h1 {
+  /* text-shadow: 2px 2px 2px #000; */
+  text-shadow: 2px 2px 2px #404143;
+}
+
+.contact-form label {
+  @apply block text-primary font-medium text-lg sm:text-xl mb-2;
+}
+
+.contact-form input {
+  @apply w-full font-bold placeholder:font-medium text-base sm:text-lg placeholder-[#B7B7B7] rounded-lg bg-[#F2F2F2] px-4 text-primary focus:outline-none h-[3.8rem];
+}
+
+.contact-form select {
+  @apply w-full font-bold placeholder:font-medium text-base sm:text-lg placeholder-[#B7B7B7] rounded-lg bg-[#F2F2F2] px-4 text-primary focus:outline-none h-[3.8rem];
+}
+
+.contact-form textarea {
+  @apply w-full font-bold placeholder:font-medium text-base sm:text-lg placeholder-[#B7B7B7] rounded-lg bg-[#F2F2F2] px-4 text-primary focus:outline-none py-4;
+}
+
+/** ----------------------------- End Contact Page ----------------------------- **/
 
 /** ----------------------------- Rating Stars ----------------------------- **/
 .rating {

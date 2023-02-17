@@ -212,12 +212,11 @@ input[type="checkbox"] {
   @apply bg-slate-200;
 }
 
-.underline-title {
+/* .underline-title {
   @apply relative;
 }
 
 .underline-title::after {
-  /* @apply rounded-3xl; */
   content: "";
   position: absolute;
   left: 42%;
@@ -225,7 +224,7 @@ input[type="checkbox"] {
   width: 200px;
   padding-top: 23px;
   border-bottom: 6px solid rgb(228, 36, 62);
-}
+} */
 
 /** ----------------------------- Contact Page ----------------------------- **/
 

@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: ["./*.{html, htm}"],
   presets: [],
@@ -986,5 +987,5 @@ module.exports = {
     "active",
     "disabled",
   ],
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };

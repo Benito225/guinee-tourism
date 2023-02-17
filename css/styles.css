@@ -165,7 +165,8 @@ input[type="checkbox"] {
   width: 100%;
 }
 
-.top-secondary-nav .active {
+.top-secondary-nav .active,
+.top-main-nav .active {
   @apply font-extrabold;
 }
 
@@ -211,6 +212,21 @@ input[type="checkbox"] {
   @apply bg-slate-200;
 }
 
+.underline-title {
+  @apply relative;
+}
+
+.underline-title::after {
+  /* @apply rounded-3xl; */
+  content: "";
+  position: absolute;
+  left: 42%;
+  display: block;
+  width: 200px;
+  padding-top: 23px;
+  border-bottom: 6px solid rgb(228, 36, 62);
+}
+
 /** ----------------------------- Contact Page ----------------------------- **/
 
 .main-cover-contact {
@@ -241,6 +257,12 @@ input[type="checkbox"] {
 
 .contact-form textarea {
   @apply w-full font-bold placeholder:font-medium text-base sm:text-lg placeholder-[#B7B7B7] rounded-lg bg-[#F2F2F2] px-4 text-primary focus:outline-none py-4;
+}
+
+input,
+select,
+textarea {
+  @apply focus:ring-primary;
 }
 
 /** ----------------------------- End Contact Page ----------------------------- **/

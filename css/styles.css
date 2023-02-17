@@ -212,6 +212,24 @@ input[type="checkbox"] {
   @apply bg-slate-200;
 }
 
+.main-cover-destination {
+  /* background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),url(https://www.etudesk.com/images/cover-about.jpg); */
+  background: url("../../images/cover-destination.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0% 70%;
+  @apply bg-slate-200;
+}
+
+.main-cover-restaurants {
+  /* background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),url(https://www.etudesk.com/images/cover-about.jpg); */
+  background: url("../../images/main-cover-restaurant.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0% 70%;
+  @apply bg-slate-200;
+}
+
 /* .underline-title {
   @apply relative;
 }

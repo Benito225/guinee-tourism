@@ -292,6 +292,14 @@ textarea {
 .rating .s-active {
   @apply fill-white;
 }
+
+.rating .s-active-primary {
+  @apply fill-primary;
+}
+
+.rating .s-active-secondary {
+  @apply fill-secondary;
+}
 /** ----------------------------- End Rating Stars ----------------------------- **/
 
 /** ----------------------------- Footer ----------------------------- **/
